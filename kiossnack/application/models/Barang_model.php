@@ -18,6 +18,10 @@ class Barang_model extends CI_Model{
     public function rules ()
     {
         return [
+            [   'field' => 'KodeBarang',
+                'label'=>'Kode Barang',
+                'rules'=>'required'],
+
             [   'field' => 'NamaBarang',
                 'label'=>'Nama Barang',
                 'rules'=>'required'],
@@ -56,13 +60,13 @@ class Barang_model extends CI_Model{
     public function save()
     {
         $post = $this->input->post();
-        $this->KodeBarang = uniqid();
+        $this->KodeBarang = $post ["id"];
         $this->NamaBarang = $post ["NamaBarang"];
         $this->DeskripsiBarang = $post ["DeskripsiBarang"];
         $this->HargaBarang = $post ["HargaBarang"];
         $this->StoctBarang = $post ["StockBarang"];
         $this->kodesuplier = $post ["kodesuplier"];
-        $this->db->insert($this->_table,$this);
+        $this->db->insert($this->_table, $this);
     }
 
     //mengedit/mengubah data

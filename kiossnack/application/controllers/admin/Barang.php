@@ -9,7 +9,7 @@ class Barang extends CI_Controller
     {
         parent::__construct();
         $this->load->model("Barang_model");
-    
+        $this->load->library('form_validation');
     }
 
     public function daftar_barang()
@@ -18,14 +18,15 @@ class Barang extends CI_Controller
         $this->load->view("admin/Barang/Daftar_barang", $data);
     }
 
-    public function add()
+    
+    public function tambah_barang()
     {
-        $Barang = $this->Barang_model;
+        $barang = $this->Barang_model;
         $validation = $this->form_validation;
-        $validation->set_rules($Barang->rules());
+        $validation->set_rules($barang->rules());
 
         if ($validation->run()) {
-            $Barang->save();
+            $barang->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 

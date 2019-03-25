@@ -34,7 +34,7 @@ $this->load->view('admin/partial/head');
       <!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-header">
-            <a href="<?php echo site_url('admin/Barang/Tambah_barang') ?>"><i class="fas fa-plus"></i> Tambah Barang</a>
+            <a href="<?php echo site_url('admin/barang/tambah_barang') ?>"><i class="fas fa-plus"></i> Tambah Barang</a>
             
 					</div>
 					<div class="card-body">
@@ -53,27 +53,27 @@ $this->load->view('admin/partial/head');
                   </tr>
 								</thead>
 								<tbody>
-                <?php foreach ($barang as $ambildata): ?>
+                <?php $no=1; foreach ($barang as $ambildata): ?>
                       <tr>
-                      <th></th>
+                      <th><?php echo $no ?></th>
 										  <td><?php echo $ambildata->KodeBarang ?></td>
 										  <td><?php echo $ambildata->NamaBarang ?></td>
 										  <td><?php echo $ambildata->DeskripsiBarang?></td>
 										  <td><?php echo $ambildata->HargaBarang?></td>
                       <td><?php echo $ambildata->StockBarang?></td>
                       <td>
-                        <a href=""class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="#"class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
 											  <a href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										  </td>
 									</tr>
-									<?php endforeach; ?>
+									<?php $no++; endforeach; ?>
 
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
-
+  
 			</div>
       <!-- /.container-fluid -->
 
