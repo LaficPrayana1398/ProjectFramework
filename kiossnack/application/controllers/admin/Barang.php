@@ -9,13 +9,13 @@ class Barang extends CI_Controller
     {
         parent::__construct();
         $this->load->model("Barang_model");
-        $this->load->library('form_validation');
+    
     }
 
-    public function index()
+    public function daftar_barang()
     {
-        $data["tbl_barang"] = $this->Barang_model->getAll();
-        $this->load->view("admin/Barang/list", $data);
+        $data["barang"] = $this->Barang_model->getAll();
+        $this->load->view("admin/Barang/Daftar_barang", $data);
     }
 
     public function add()
@@ -29,7 +29,7 @@ class Barang extends CI_Controller
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $this->load->view("admin/Barang/new_form");
+        $this->load->view("admin/Barang/Tambah_barang");
     }
 
     public function edit($id = null)
@@ -48,7 +48,7 @@ class Barang extends CI_Controller
         $data["tbl_barang"] = $Barang_model->getById($id);
         if (!$data["tbl_barang"]) show_404();
         
-        $this->load->view("admin/Barang/edit_form", $data);
+        $this->load->view("admin/Barang/Edit_barang", $data);
     }
 
     public function delete($id=null)

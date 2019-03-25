@@ -13,7 +13,7 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Data Master</h6>
           <a class="dropdown-item" href="login.html">Suplier</a>
-          <a class="dropdown-item" href="register.html">Barang</a>
+          <a class="dropdown-item" href="<?= site_url('admin/barang/daftar_barang')?>">Barang</a>
           <a class="dropdown-item" href="forgot-password.html">Karyawan</a>
           <a class="dropdown-item" href="forgot-password.html">User</a>
         </div>

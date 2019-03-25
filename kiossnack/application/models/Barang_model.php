@@ -37,8 +37,8 @@ class Barang_model extends CI_Model{
             [   'field' => 'kodesuplier',
                 'label'=>'Kode Suplier',
                 'rules'=>'required']
-        ]
-    }
+        ];
+        }
 
     //mengambil semua data pada tabel
 
@@ -49,7 +49,7 @@ class Barang_model extends CI_Model{
 
     public function getById()
     {
-        return $this->db->get_where($this->_table, ["KodeBarang"=$id])->row();
+        return $this->db->get_where($this->_table, ["KodeBarang"=>$id])->row();
     }
 
     //menyimpan data
@@ -75,8 +75,11 @@ class Barang_model extends CI_Model{
         $this->HargaBarang = $post ["HargaBarang"];
         $this->StoctBarang = $post ["StockBarang"];
         $this->kodesuplier = $post ["kodesuplier"];
-        $this->db->update($this->_table, $this, array ('KodeBarang'=>$post['id'])) ;
+        $this->db->update($this->_table, $this, array ("KodeBarang"=>$post['id'])) ;
     }
 
+    public function delete($id){
+        return $this->db->delete($this->_table,array("KodeBarang"=>$id));
+    }
     
 }
