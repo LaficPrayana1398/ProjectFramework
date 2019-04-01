@@ -30,43 +30,43 @@
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url('admin/Barang/tambah_barang') ?>" method="post" enctype="multipart/form-data" >
+						<form action="<?php echo site_url('admin/barang/tambah_aksi') ?>" method="post" >
 						<div class="form-group">
 								<label for="kode">Kode barang</label>
-								<input class="form-control <?php echo form_error('Kode') ? 'is-invalid':'' ?>"
-								 type="text" name="id" placeholder="Kode Barang" />
+								<input class="form-control"
+								 type="text" name="KodeBarang" placeholder="Kode Barang" />
 							</div>
 							<div class="form-group">
 								<label for="name">Nama barang</label>
-								<input class="form-control <?php echo form_error('Name') ? 'is-invalid':'' ?>"
+								<input class="form-control "
 								 type="text" name="NamaBarang" placeholder="Nama Barang" />
 							</div>
 
                             <div class="form-group">
 								<label for="deskripsi">Deskripsi</label>
-								<textarea class="form-control <?php echo form_error('Deskripsi') ? 'is-invalid':'' ?>"
+								<textarea class="form-control "
 								 name="DeskripsiBarang" placeholder="Deskripsi Barang..."></textarea>
 								</div>
 
 							<div class="form-group">
 								<label for="Harga">Harga</label>
-								<input class="form-control <?php echo form_error('Harga') ? 'is-invalid':'' ?>"
+								<input class="form-control"
 								 type="number" name="HargaBarang" min="0" placeholder="Harga Barang" />
 								</div>
 
                             <div class="form-group">
 								<label for="stok">Stok</label>
-								<input class="form-control <?php echo form_error('Stok') ? 'is-invalid':'' ?>"
+								<input class="form-control"
 								 type="number" name="StockBarang" min="0" placeholder="Harga Barang" />
 								</div>
 							
 							<div class="form-group">
 								<label for="suplier">Suplier</label>
-								<input class="form-control <?php echo form_error('Suplier') ? 'is-invalid':'' ?>"
+								<input class="form-control"
 								 type="text" name="kodesuplier" min="0" placeholder="Suplier" />
 								</div>
 
-							<input class="btn btn-success" type="submit" name="btn" value="save" />
+							<input type="submit" value="Tambah" />
 						</form>
 
 					</div>

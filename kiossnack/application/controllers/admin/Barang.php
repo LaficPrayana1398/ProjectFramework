@@ -9,7 +9,7 @@ class Barang extends CI_Controller
     {
         parent::__construct();
         $this->load->model("Barang_model");
-        $this->load->library('form_validation');
+        $this->load->helper("url");
     }
 
     public function daftar_barang()
@@ -19,45 +19,40 @@ class Barang extends CI_Controller
     }
 
     
-    public function tambah_barang()
-    {
-        $barang = $this->Barang_model;
-        $validation = $this->form_validation;
-        $validation->set_rules($barang->rules());
+    function tambah(){
+		$this->load->view('admin/Barang/Tambah_barang');
+	}
+ 
+	function tambah_aksi(){
+		$KodeBarang = $this->input->post('KodeBarang');
+		$NamaBarang = $this->input->post('NamaBarang');
+		$DeskripsiBarang = $this->input->post('DeskripsiBarang');
+        $HargaBarang = $this->input->post('HargaBarang');
+        $StockBarang = $this->input->post('StockBarang');
+        $kodesuplier = $this->input->post('kodesuplier');
+		$data = array(
+			'KodeBarang' => $KodeBarang,
+			'NamaBarang' => $NamaBarang,
+            'DeskripsiBarang' => $DeskripsiBarang,
+            'HargaBarang' => $HargaBarang,
+            'StockBarang'=> $StockBarang,
+            'kodesuplier'=> $kodesuplier
+            );
+            
+		$this->Barang_model->input_data($data,'tbl_barang');
+		redirect('admin/Barang/daftar_barang');
+	}
 
-        if ($validation->run()) {
-            $barang->save();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
-        }
+    function edit($KodeBarang){
+		$where = array('KodeBarang' => $KodeBarang);
+		$data['barang'] = $this->Barang_model->edit_barang($where,'tbl_barang')->result();
+		$this->load->view('admin/Barang/Edit_barang',$data);
+	}
 
-        $this->load->view("admin/Barang/Tambah_barang");
-    }
+    function delete($KodeBarang){
+		$where = array('KodeBarang' => $KodeBarang);
+		$this->Barang_model->hapus_barang($where,'tbl_barang');
+		redirect('admin/Barang/daftar_barang');
+	}
 
-    public function edit($id = null)
-    {
-        if (!isset($id)) redirect('admin/tbl_barang');
-       
-        $Barang = $this->product_model;
-        $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
-
-        if ($validation->run()) {
-            $product->update();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
-        }
-
-        $data["tbl_barang"] = $Barang_model->getById($id);
-        if (!$data["tbl_barang"]) show_404();
-        
-        $this->load->view("admin/Barang/Edit_barang", $data);
-    }
-
-    public function delete($id=null)
-    {
-        if (!isset($id)) show_404();
-        
-        if ($this->Barang_model->delete($id)) {
-            redirect(site_url('admin/tbl_barang'));
-        }
-    }
 }

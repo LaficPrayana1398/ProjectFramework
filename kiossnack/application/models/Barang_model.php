@@ -56,34 +56,18 @@ class Barang_model extends CI_Model{
         return $this->db->get_where($this->_table, ["KodeBarang"=>$id])->row();
     }
 
-    //menyimpan data
-    public function save()
-    {
-        $post = $this->input->post();
-        $this->KodeBarang = $post ["id"];
-        $this->NamaBarang = $post ["NamaBarang"];
-        $this->DeskripsiBarang = $post ["DeskripsiBarang"];
-        $this->HargaBarang = $post ["HargaBarang"];
-        $this->StoctBarang = $post ["StockBarang"];
-        $this->kodesuplier = $post ["kodesuplier"];
-        $this->db->insert($this->_table, $this);
+    function input_data($data,$table){
+		$this->db->insert($table,$data);
     }
 
     //mengedit/mengubah data
-    public function update()
-    {
-        $post = $this->input->post();
-        $this->KodeBarang = $post ["id"];
-        $this->NamaBarang = $post ["NamaBarang"];
-        $this->DeskripsiBarang = $post ["DeskripsiBarang"];
-        $this->HargaBarang = $post ["HargaBarang"];
-        $this->StoctBarang = $post ["StockBarang"];
-        $this->kodesuplier = $post ["kodesuplier"];
-        $this->db->update($this->_table, $this, array ("KodeBarang"=>$post['id'])) ;
-    }
+    function edit_barang ($where,$table){
+		return $this->db->get_where($table, $where);
+	}
 
-    public function delete($id){
-        return $this->db->delete($this->_table,array("KodeBarang"=>$id));
-    }
+    function hapus_barang($where,$table){
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
     
 }
