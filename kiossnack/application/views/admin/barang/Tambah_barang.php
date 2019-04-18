@@ -30,7 +30,7 @@
 					</div>
 					<div class="card-body">
 
-						<form action="<?php echo site_url('admin/barang/tambah_aksi') ?>" method="post" >
+						<form action="<?php echo site_url('admin/barang/tambah_aksi') ?>" method="post" enctype="multipart/form" >
 						<div class="form-group">
 								<label for="kode">Kode barang</label>
 								<input class="form-control"

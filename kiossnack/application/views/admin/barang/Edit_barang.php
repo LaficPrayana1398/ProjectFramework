@@ -30,7 +30,7 @@
 					</div>
 					<div class="card-body">
 
-                    <?php foreach ($barang as $ambildata){ ?>
+                    <?php ($barang as $ambildata){ ?>
 						<form action="<?php echo site_url('admin/barang/edit') ?>" method="post" >
 						<div class="form-group">
 								<label for="kode">Kode barang</label>
