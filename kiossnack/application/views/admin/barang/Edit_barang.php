@@ -73,7 +73,7 @@
 					</div>
 
 					<div class="card-footer small text-muted">
-						* required fields
+						*required fields
 					</div>
 
 
