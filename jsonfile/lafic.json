@@ -8,7 +8,7 @@
       "Position": "Goalkeeper",
       "International": "Spain",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/degea.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/degea.png"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "Position": "Defender",
       "International": "Sweden",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/viktor.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/viktor.png"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "Position": "Defender",
       "International": "Ivory Coast",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/erik.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/erik.png"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "Position": "Defender",
       "International": "England",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/phil.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/phil.png"
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "Position": "Defender",
       "International": "Argentina",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/rojo.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/rojo.png"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "Position": "MidFielder",
       "International": "France",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/pogba.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/pogba.png"
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "Position": "Forward",
       "International": "Chile",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/alexis.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/alexis.png"
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "Position": "Attacking MidFielder",
       "International": "Spain",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/mata.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/mata.png"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "Position": "Striker",
       "International": "Belgium",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/lukaku.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/lukaku.png"
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "Position": "Striker",
       "International": "France",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/martial.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/martial.png"
     },
     {
       "id": 11,
@@ -108,7 +108,7 @@
       "Position": "Defender",
       "International": "England",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/smaling.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/smaling.png"
     },
     {
       "id": 12,
@@ -118,7 +118,7 @@
       "Position": "MidFielder",
       "International": "England",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/lingard.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/lingard.png"
     },
     {
       "id": 13,
@@ -128,7 +128,7 @@
       "Position": "Goal Keeper",
       "International": "Portugal",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/joel.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/joel.png"
     },
     {
       "id": 14,
@@ -138,7 +138,7 @@
       "Position": "Forward",
       "International": "England",
       "Team": "Manchester United",
-      "Poster": "http://192.168.43.46/jsonfile/marcus.png"
+      "Poster": "https://raw.githubusercontent.com/LaficPrayana1398/ProjectFramework/master/jsonfile/marcus.png"
     }
   ]
 }
